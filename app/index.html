@@ -6,8 +6,8 @@
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title></title>
-    <meta name="description" content=""/>
+    <title>531 Calculator</title>
+    <meta name="description" content="Calculate weight to be used for sets on the 5/3/1 program"/>
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" href="styles/main.css"/>
 
@@ -17,11 +17,52 @@
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
 
+    <div id="container">
+      <header id="header">
+        <a href="" title="531 Calculator" class="logo">
+          <img src="images/logo.png" width="495" alt="531 Calculator Logo" height="209" />
+        </a>
+      </header>
+      <div id="main">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>
+                <abbr title="Week 1">WK1</abbr>
+              </th>
+              <th>
+                <abbr title="Week 2">WK2</abbr>
+              </th>
+              <th>
+                <abbr title="Week 3">WK3</abbr>
+              </th>
+              <th>
+                <abbr title="Week 4">WK4</abbr>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="calculator">
+          
+          </tbody>
+        </table>
+      </div>
+      <footer id="footer">
+        <p class="copyright">Program by Jim Wendler | Calculator by Justin Christensen | © 2012 All Rights Reserved </p>
+      </footer>
+    </div>
+
+    <!-- Templates (single page application) -->
+    <script type="text/template" id="row-template">
+      
+    </script>
 
     <script src="scripts/vendor/jquery.min.js"></script>
     <script src="scripts/vendor/lodash.min.js"></script>
     <script src="scripts/vendor/backbone-min.js"></script>
+
     <script src="scripts/main.js"></script>
+    <script src="scripts/models/LiftRow-model.js"></script>
 
   </body>
 </html>
