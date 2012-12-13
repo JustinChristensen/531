@@ -3,4 +3,139 @@
 @import 'compass';
 @import 'normalize';
 
+body {
+  @include background(url('../images/noise.png'), radial-gradient(center top, circle farthest-side, #a69e98, #000) no-repeat);
+  background-color: #000;
+  color: #2f292a;
+  font-family: 'Arial Black', Arial, Helvetica, sans-serif;
+}
+
+abbr[title] {
+  border-bottom: none;
+}
+
+.container {
+  width: 1050px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#header {
+  @include clearfix;
+  background: url('../images/chains.png') no-repeat 14px top;
+  width: 100%;
+  height: 203px;
+}
+
+.logo {
+  float: left;
+  position: absolute;
+  top: 6px;
+  left: 67px;
+}
+
+#main {
+  @include box-shadow(rgba(0, 0, 0, .75) 3px 3px 10px 0px);
+  background: #f6f6f6;
+  width: 100%;
+}
+
+.main-table { 
+  width: 100%; 
+
+  > tbody > tr {
+    > td {
+      border: 1px solid #423839; 
+      padding: 0px;
+    }
+  }
+
+  table {
+    font-size: 18px;
+    margin: 0 auto;
+
+    th {
+      text-transform: uppercase;
+      padding: 3px 10px;
+    }  
+
+    td {
+      text-align: center;
+      padding: 2px 0px;
+    }
+  }
+}
+
+.ch {
+  width: 214px;
+  border: {
+    left: 1px solid #423839; 
+    right: 1px solid #423839; 
+    bottom: 1px solid #423839; 
+  } 
+
+  abbr {
+    font-size: 48px;
+    line-height: 98px;
+    margin-bottom: 2px;
+  }
+}
+
+.rh {
+  border-left: none!important;
+  background: #f6f6f6;
+
+  label {
+    cursor: text;
+    font-size: 18px;
+    display: block;
+    line-height: 1em;
+    margin: 15px 0 0 16px;
+  }
+
+  input {
+    font-size: 72px;
+    background: none;
+    width: 84%;
+    margin: 0 8%;
+    border: none;
+    text-align: center;
+    color: #2f292a;
+    padding: 0;
+
+    &:focus {
+      outline: none;
+      color: #000;
+    }
+  }
+}
+
+.day {
+  font-size: 12px;
+  background: #2f292a;
+  color: #fff;
+  display: block;
+  float: left;
+  text-align: center;
+  width: 75px;
+  line-height: 30px;
+  margin-bottom: -1px;
+}
+
+.cf {
+  border-left: none;
+  width: 190px;
+}
+
+.lift-row {
+  background: #fff;
+}
+
+.copyright {
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #8b8b8b;
+  text-align: center;
+  margin: 15px 0 30px;
+}
 
