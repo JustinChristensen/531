@@ -11,42 +11,43 @@
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" href="styles/main.css"/>
 
+    <script src="scripts/vendor/modernizr.min.js"></script>
   </head>
   <body>
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
 
-    <div id="container">
+    <div id="application" class="container">
       <header id="header">
-        <a href="" title="531 Calculator" class="logo">
+        <a href="/" title="531 Calculator" class="logo">
           <img src="images/logo.png" width="495" alt="531 Calculator Logo" height="209" />
         </a>
       </header>
+
       <div id="main">
-        <table>
+        <table class="main-table">
           <thead>
             <tr>
-              <th></th>
-              <th>
+              <th class="cf ch"></th>
+              <th class="ch">
                 <abbr title="Week 1">WK1</abbr>
               </th>
-              <th>
+              <th class="ch">
                 <abbr title="Week 2">WK2</abbr>
               </th>
-              <th>
+              <th class="ch">
                 <abbr title="Week 3">WK3</abbr>
               </th>
-              <th>
+              <th class="ch">
                 <abbr title="Week 4">WK4</abbr>
               </th>
             </tr>
           </thead>
-          <tbody class="calculator">
-          
-          </tbody>
+          <tbody class="calculator"></tbody>
         </table>
       </div>
+
       <footer id="footer">
         <p class="copyright">Program by Jim Wendler | Calculator by Justin Christensen | © 2012 All Rights Reserved </p>
       </footer>
@@ -54,15 +55,50 @@
 
     <!-- Templates (single page application) -->
     <script type="text/template" id="row-template">
-      
+      <td class="rh">
+        <label for="<%= lift.toLowerCase() %>-input"><%= lift %></label>
+        <input type="" id="<%= lift.toLowerCase() %>-input" class="max-input" name="<%= lift.toLowerCase() %>" value="<%= max == 0 ? '' : max %>" maxlength="3" />
+        <span class="day">Day <%= order + 1 %></span>
+      </td>
+    </script>
+
+    <script type="text/template" id="cell-template">
+      <table>
+        <thead>
+          <tr>
+            <th>Reps</th>
+            <th>Weight</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= reps[0] %></td>
+            <td><%= weights[0] %></td>
+          </tr>
+          <tr>
+            <td><%= reps[1] %></td>
+            <td><%= weights[1] %></td>
+          </tr>
+          <tr>
+            <td><%= reps[2] %></td>
+            <td><%= weights[2] %></td>
+          </tr>
+        </tbody>
+      </table>
     </script>
 
     <script src="scripts/vendor/jquery.min.js"></script>
     <script src="scripts/vendor/lodash.min.js"></script>
     <script src="scripts/vendor/backbone-min.js"></script>
+    <script src="scripts/vendor/backbone.localStorage-min.js"></script>
 
     <script src="scripts/main.js"></script>
-    <script src="scripts/models/LiftRow-model.js"></script>
+
+    <script src="scripts/models/liftrow.model.js"></script>
+    <script src="scripts/collections/liftrows.collection.js"></script>
+    <script src="scripts/views/liftrow.view.js"></script>
+    <script src="scripts/views/liftcell.view.js"></script>
+    <script src="scripts/views/application.view.js"></script>
 
   </body>
 </html>
