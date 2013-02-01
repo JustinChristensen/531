@@ -7,7 +7,7 @@
 
     calculator: '.calculator',
 
-    initialize: function () {
+    initialize: function (options) {
       this.$calculator = $(this.calculator);
       _531.rows.on('reset', this.render, this);
 
@@ -38,6 +38,5 @@
     }
 
   });
-
 
 }(window, jQuery));

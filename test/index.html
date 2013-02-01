@@ -11,34 +11,27 @@
   <script>mocha.setup('bdd')</script>
 
   <!-- assertion framework -->
-  
   <script src="lib/chai.js"></script>
-    
-      
   <script>expect = chai.expect</script>
-      
-    
-  
 
-  <!-- -->
+  <!-- sources -->
+  <script src="../app/scripts/vendor/jquery.min.js"></script>
+  <script src="../app/scripts/vendor/lodash.min.js"></script>
+  <script src="../app/scripts/vendor/backbone-min.js"></script>
+  <script src="../app/scripts/vendor/backbone.localStorage-min.js"></script>
 
-  <!-- include source files here... -->
+  <script src="../app/scripts/main.js"></script>
 
-  <!-- include spec files here... -->
-  <script>
-  // replace this by your own specs
-  (function() {
-    describe('Give it some context', function() {
-      describe('maybe a bit more context here', function() {
+  <script src="../app/scripts/models/liftrow.model.js"></script>
+  <script src="../app/scripts/collections/liftrows.collection.js"></script>
+  <script src="../app/scripts/views/liftrow.view.js"></script>
+  <script src="../app/scripts/views/liftcell.view.js"></script>
+  <script src="../app/scripts/views/application.view.js"></script>
 
-        it('should run here few assertions', function() {
-
-        });
-
-      });
-    });
-  })();
-  </script>
+  <!-- specs -->
+  <script src="spec/main_spec.js"></script>
+  <script src="spec/liftrow_spec.js"></script>
+  <script src="spec/liftrows_spec.js"></script>
 
   <!-- trigger the mocha runner -->
   <script src="runner/mocha.js"></script>
