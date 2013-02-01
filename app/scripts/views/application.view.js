@@ -17,7 +17,8 @@
     bootstrap: function () {
       // If there are no stored rows bootstrap application
       // with initial rows
-      if (_531.rows.fetch().length === 0) {
+      _531.rows.fetch();
+      if (_531.rows.length === 0) {
         _531.rows.reset(_531.initialRows);
       }
     },

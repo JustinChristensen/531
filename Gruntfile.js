@@ -33,7 +33,7 @@ module.exports = function( grunt ) {
         // http://compass-style.org/help/tutorials/configuration-reference/#configuration-properties
         options: {
           require: ['compass-normalize'],
-          css_dir: 'temp/styles',
+          css_dir: ['temp/styles', 'app/styles'],
           sass_dir: 'app/styles',
           images_dir: 'app/images',
           javascripts_dir: 'temp/scripts',
